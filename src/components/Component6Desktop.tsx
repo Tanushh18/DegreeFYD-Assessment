@@ -2,6 +2,7 @@
 
 import { useState, useCallback } from "react";
 
+
 // ─── Shared College Data ───────────────────────────────────────────────────────
 
 const COLLEGES = [
@@ -604,7 +605,7 @@ export default function Component6Desktop() {
         }
 
         .c6-carousel:first-of-type{
-          margin-top: -300px;
+          margin-top: -200px;
         }
         .c6-car-title{font-family:'Sora',sans-serif;font-size:clamp(14px,2vw,17px);font-weight:700;color:var(--n);margin-bottom:14px;}
         .c6-car-row{display:flex;align-items:center;gap:8px;}

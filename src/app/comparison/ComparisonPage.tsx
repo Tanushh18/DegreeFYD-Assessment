@@ -6,6 +6,7 @@ import Component6Desktop from "@/components/Component6Desktop";
 export default function ComparisonPage() {
   return (
     <>
+      <Header />
       <div className="hidden md:block">
         <Component5Desktop />
       </div>
