@@ -3,6 +3,24 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+
+  /* colors */
+  --o: #e8621a;
+  --n: #1a2744;
+  --s: #374151;
+  --m: #6b7280;
+  --bd: #e5e7eb;
+  --bg: #f8f9fb;
+  --w: #ffffff;
+
+  /* tags */
+  --tbg: #fff7ed;
+  --tbd: #fed7aa;
+
+  /* ui */
+  --r: 12px;
+  --sh: 0 2px 14px rgba(0,0,0,.07);
+  --shlg: 0 6px 28px rgba(0,0,0,.10);
 }
 
 @theme inline {
