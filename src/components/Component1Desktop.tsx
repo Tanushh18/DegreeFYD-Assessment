@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import { Search, ArrowRight, Users, PhoneCall, Building2, Star } from "lucide-react";
 
@@ -25,6 +27,8 @@ const stats = [
 ];
 
 export default function HeroSection() {
+  const comingSoon = () => alert("🚧 Feature coming soon!");
+
   return (
     <section className="relative w-full min-h-[520px] flex items-center overflow-hidden bg-[#1a3a6b]">
       {/* Background image overlay */}
@@ -57,7 +61,10 @@ export default function HeroSection() {
                 placeholder="Search Colleges, Courses..."
                 className="flex-1 px-3 py-3.5 text-sm text-gray-700 outline-none placeholder:text-gray-400 bg-transparent"
               />
-              <button className="flex items-center gap-2 bg-[#1e3a5f] hover:bg-[#162d4a] transition-colors text-white text-sm font-semibold px-5 py-3.5 m-1 rounded-lg whitespace-nowrap">
+              <button
+                onClick={comingSoon}
+                className="flex items-center gap-2 bg-[#1e3a5f] hover:bg-[#162d4a] transition-colors text-white text-sm font-semibold px-5 py-3.5 m-1 rounded-lg whitespace-nowrap"
+              >
                 Search <ArrowRight size={15} />
               </button>
             </div>
