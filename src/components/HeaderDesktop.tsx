@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import {
   Phone,
@@ -9,6 +11,8 @@ import {
 } from "lucide-react";
 
 export default function Header() {
+  const comingSoon = () => alert("🚧 Feature coming soon!");
+
   return (
     <header className="w-full">
       {/* Top Bar */}
@@ -54,24 +58,33 @@ export default function Header() {
 
         {/* Nav Links */}
         <div className="hidden md:flex items-center gap-1 flex-1">
-          <NavItem label="Universities" />
-          <NavItem label="Courses" />
-          <NavItem label="More" />
+          <NavItem label="Universities" onClick={comingSoon} />
+          <NavItem label="Courses" onClick={comingSoon} />
+          <NavItem label="More" onClick={comingSoon} />
         </div>
 
         {/* Right Side */}
         <div className="flex items-center gap-2 ml-auto">
-          <button className="hidden md:flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm text-gray-700 font-medium border border-gray-200 hover:bg-gray-50 transition-colors">
+          <button
+            onClick={comingSoon}
+            className="hidden md:flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm text-gray-700 font-medium border border-gray-200 hover:bg-gray-50 transition-colors"
+          >
             Regular
             <ChevronDown size={14} className="text-gray-500" />
           </button>
 
-          <button className="flex items-center gap-1.5 px-4 py-1.5 rounded-lg text-sm text-gray-700 font-medium border border-gray-300 hover:bg-gray-50 transition-colors">
+          <button
+            onClick={comingSoon}
+            className="flex items-center gap-1.5 px-4 py-1.5 rounded-lg text-sm text-gray-700 font-medium border border-gray-300 hover:bg-gray-50 transition-colors"
+          >
             <Search size={14} />
             <span className="hidden sm:inline">Search</span>
           </button>
 
-          <button className="flex items-center gap-1.5 px-4 py-2 rounded-lg text-sm text-white font-medium bg-[#1e3a5f] hover:bg-[#162d4a] transition-colors">
+          <button
+            onClick={comingSoon}
+            className="flex items-center gap-1.5 px-4 py-2 rounded-lg text-sm text-white font-medium bg-[#1e3a5f] hover:bg-[#162d4a] transition-colors"
+          >
             <User size={14} />
             <span className="hidden sm:inline">Sign In</span>
           </button>
@@ -81,9 +94,12 @@ export default function Header() {
   );
 }
 
-function NavItem({ label }: { label: string }) {
+function NavItem({ label, onClick }: { label: string; onClick: () => void }) {
   return (
-    <button className="flex items-center gap-1 px-3 py-2 rounded-lg text-sm text-gray-700 font-medium hover:bg-gray-100 transition-colors">
+    <button
+      onClick={onClick}
+      className="flex items-center gap-1 px-3 py-2 rounded-lg text-sm text-gray-700 font-medium hover:bg-gray-100 transition-colors"
+    >
       {label}
       <ChevronDown size={14} className="text-gray-400" />
     </button>
