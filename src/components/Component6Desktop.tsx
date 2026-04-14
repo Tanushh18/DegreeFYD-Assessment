@@ -707,7 +707,7 @@ export default function Component6Desktop() {
   );
 }"use client";
 
-import { useState, useCallback } from "react";
+
 
 
 // ─── Shared College Data ───────────────────────────────────────────────────────
