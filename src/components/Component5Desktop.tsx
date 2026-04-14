@@ -664,6 +664,7 @@ export default function Component5Desktop() {
   const [rightId, setRightId] = useState(2);
   const [showComparison, setShowComparison] = useState(false);
   const [editingSide, setEditingSide] = useState<"left" | "right" | null>(null);
+  const comingSoon = () => alert("🚧 Feature coming soon!");
 
   const left = COLLEGES.find((c) => c.id === leftId)!;
   const right = COLLEGES.find((c) => c.id === rightId)!;
@@ -808,8 +809,8 @@ export default function Component5Desktop() {
 
                 <div className="section-card">
                   <div className="shortlist-row">
-                    <button className="btn-shortlist dark">Shortlist</button>
-                    <button className="btn-shortlist amber">Shortlist</button>
+                    <button className="btn-shortlist dark" onClick={comingSoon}>Shortlist</button>
+                    <button className="btn-shortlist amber" onClick={comingSoon}>Shortlist</button>
                   </div>
                 </div>
 
@@ -827,7 +828,7 @@ export default function Component5Desktop() {
             <div className="cta-banner">
               <div className="cta-text">
                 <h4>Still not Sure about colleges?<br />Let's Connect with our Experts.</h4>
-                <button className="btn-cta">Connect Now</button>
+                <button className="btn-cta" onClick={comingSoon}>Connect Now</button>
               </div>
               <div className="cta-img">
                 <img src="https://cdn-icons-png.flaticon.com/512/4140/4140048.png" alt="expert" />
