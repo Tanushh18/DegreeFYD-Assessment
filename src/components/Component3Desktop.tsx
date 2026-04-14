@@ -64,6 +64,8 @@ const VISIBLE = 5;
 
 // ─── EXPERT CARD ─────────────────────────────────────────────────────────────
 function ExpertCard({ expert }: { expert: (typeof experts)[0] }) {
+  const comingSoon = () => alert("🚧 Feature coming soon!");
+
   return (
     <div className="bg-white rounded-2xl border border-gray-200 p-5 flex flex-col items-center text-center gap-3 min-w-0 flex-1 shadow-sm hover:shadow-md transition-shadow">
       {/* Avatar */}
@@ -106,7 +108,10 @@ function ExpertCard({ expert }: { expert: (typeof experts)[0] }) {
       </div>
 
       {/* CTA */}
-      <button className="w-full flex items-center justify-center gap-2 bg-[#1e3a5f] hover:bg-[#162d4a] text-white text-xs font-semibold py-2.5 rounded-xl transition-colors">
+      <button
+        onClick={comingSoon}
+        className="w-full flex items-center justify-center gap-2 bg-[#1e3a5f] hover:bg-[#162d4a] text-white text-xs font-semibold py-2.5 rounded-xl transition-colors"
+      >
         <CalendarDays size={13} />
         Book a Free Session
       </button>
